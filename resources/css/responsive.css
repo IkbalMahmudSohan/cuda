@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1200px)
+{
+    header{
+      height: 85vh;
+    }
+    .row{
+        margin: 0 20px;
+    }
+    html{
+        font-size: 57.5%;
+    }
+     .hero-text-box{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 1024px)
+{
+    header{
+        height: 65vh;
+    }
+    .row{
+        margin: 0 20px;
+    }
+   
+    .main-nav{
+        display: none;
+    }
+    html{
+        font-size: 57.5%;
+    }
+    .client-image{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .client-description{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .mobile-menu span{
+    display:block;
+}
+}
+@media only screen and (max-width: 980px)
+{
+    .span_1_of_4{
+        width: 49.2%;
+    }
+    .span_1_of_4:nth-child(3){
+        margin-left: 0;
+    }
+    html{
+        font-size: 62.5%;
+    }
+}
+@media only screen and (max-width: 768px)
+{
+        header{
+      height: 70vh;
+    }
+    .span_1_of_2{
+        width: 100%;
+    }
+    .tittle-description{
+        width: 100%;
+        margin-left: 0;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 480px)
+{
+        header{
+      height: 90vh;}
+    
+     .span_1_of_4{
+        width: 100%;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .testmonial .col:nth-child(4),
+    .testmonial .col:nth-child(3){
+        margin-top: 4rem;
+    }
+}

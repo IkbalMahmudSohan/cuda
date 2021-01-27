@@ -1,0 +1,566 @@
+/*=====Basic setup=====*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 4.2rem;
+    color: #fff;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+ul li{
+    list-style-type: none;
+}
+:focus{
+    outline: 0;
+}
+/*For Service Section*/
+/*.clearfix ::after{
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}*/
+
+/*=====Reuseable=====*/
+.row{
+    max-width: 114rem;
+    margin: auto;
+}
+section{
+    color: #fff;
+    padding: 8rem 0;
+}
+.btn:link,
+.btn:visited,
+.btn{
+    background: #333;
+    padding: 1.6rem 4rem;
+    border-radius: .3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-bottom: .3rem solid #000;
+    display: inline-block;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+h4{
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #393939;
+    text-transform: uppercase;
+}
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    
+}
+
+/*=====Header=====*/
+header{
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(135, 80, 156, 0.90)), to(rgba(135, 80, 156, 0.90))),url(img/butterfly.jpg);
+    background:linear-gradient(rgba(135, 80, 156, 0.90), rgba(135, 80, 156, 0.90)),url(img/butterfly.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 85vh;
+    position: relative;
+    background-attachment: fixed;
+}
+.logo{
+    height: 3.5rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+    
+}
+.hero-text-box{
+    max-width: 114rem;
+}
+.btn-hero:link,
+.btn-hero:visited{
+    background: #eb7d4b;
+    font-size: 1.6rem;
+    border-color: #c86a40;
+}
+/*=====Mobile menu=====*/
+.mobile-menu span{
+    color: #fff;
+    font-size: 4rem;
+    float: right;
+    margin-top: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.overly{
+    width: 0;  
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index:1;
+    overflow: hidden;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+.overly-content{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+.overly-content a{
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: #999;
+    padding: 1rem 0;
+}
+.overly-content a:hover{
+    color: #fff;
+}
+.close-btn{
+    position: absolute;
+    top: 3rem;
+    right: 5.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 4rem;
+}
+.sticky .mobile-menu span{
+    margin-top: 0;
+}
+
+/*=====Navigation=====*/
+.main-nav{
+    float: right;
+}
+.main-nav li{
+    display:inline-block;
+    margin-top: 3.5rem;
+    margin-left: 1rem;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(100, 58, 121, 0);
+    padding: .3rem 1.6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.main-nav li:nth-child(1){
+    margin-left:0;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background: rgba(100, 58, 121, 1);
+}
+.active{
+    background: rgba(100, 58, 121, 1);
+    border-radius: .3rem;
+}
+.hero-text-box{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+/*=====sticky=====*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(135, 80, 156, 0.9);
+    padding: 1rem 0;
+    -webkit-box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.9);
+    box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.9);
+    z-index: 9999;
+}
+.sticky .logo{
+    margin-top: 0;
+}
+.sticky .main-nav li{
+    margin-top: .3rem;
+}
+/*=====Header=====*/
+
+/*=====Services=====*/
+
+.service-section{
+    text-align: center;
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(23, 194, 164, .9)),to(rgba(23, 194, 164, 0.9))),url(img/momlearn.jpg);
+    background: linear-gradient(rgba(23, 194, 164, .9),rgba(23, 194, 164, 0.9)),url(img/momlearn.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center,top;
+}
+.tittle-description{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+}
+.service-icon{
+    height: 10rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+
+/*=====Member=====*/
+.team-section{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(231, 241, 248, 0.85)),to(rgba(231, 241, 248, 0.85))), url(img/team.jpg);
+    background: linear-gradient(rgba(231, 241, 248, 0.85),rgba(231, 241, 248, 0.85)), url(img/team.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+     background-attachment: fixed;
+}
+.team-section h2{
+    color: #3c4761;
+}
+.team-section h2::after{
+    background: #c8d9e5;
+}
+.team-section .tittle-description{
+    color: #3c4761;
+    font-size: 1.8rem;
+}
+
+.team-section h3{
+    color: #27283d;
+}
+.team-member{
+    height: 20rem;
+    width: 20rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    border-radius: 50%;
+}
+.role{
+    color: purple;
+    text-transform: capitalize;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+.team-section .box p{
+    font-size: 1.6rem;
+    color: #3c4761;
+}
+.social-link{
+    margin-top: 4.5rem;
+}
+.social-link ul li{
+    display: inline-block;
+    margin: 0 .5rem;
+}
+.social-link ul li a{
+    color: #fff;
+}
+.social-link ul li a:link i::before{
+    background: #73a8cc;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 1rem;
+    -webkit-transition: .7s;
+    transition: .7s;
+}
+.social-link ul li a:hover i::before {
+    background: #08081d;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+/*=====Skill=====*/
+
+.skill-section{
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.85)), to(rgba(255, 255, 255, 0.85))),url(img/skill1.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),url(img/skill1.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    
+}
+.skill-section h2{
+    color: #3c4761;
+    margin-top: 4.5rem;
+}
+.skill-section h2::after{
+    background: #dfe8ed;
+}
+.skill-section h3{
+    color: #3c4761;
+}
+.skill-section p{
+    color: #3c4761;
+}
+.skill-section h2::after{
+    color: black;
+}
+.skil-section .box {
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+    stroke-width:5;
+}
+svg.radial-progress text{
+    fill: #3c4761;
+    font-size: 1.8rem;
+    text-align: center;
+}
+svg.web-design circle{
+    stroke: #30bae7;
+}
+svg.html-css circle{
+    stroke: #d74680;
+}
+svg.graphic-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+/*=====portfolio=====*/
+.portfolio-section{
+    text-align: center;
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 221, 153, 0.9)),to(rgba(255, 221, 153, 0.85))),url(img/car.jpg);
+    background: linear-gradient(rgba(255, 221, 153, 0.9),rgba(255, 221, 153, 0.85)),url(img/car.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+     background-attachment: fixed;
+   
+}
+.portfolio-section h2{
+    color: #393939;
+
+}
+.portfolio-section h2::after{
+   background:  #e5c37f;
+}
+.portfolio-section p{
+    color: #393939;
+}
+.portfolio-filter{
+    margin: 4.5rem 0;
+}
+.portfolio-filter button{
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    color: #393939;
+    margin: 0 .5rem;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+.portfolio-filter button:hover{
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 .3rem .5rem rgba(60, 71, 97, 0.5);
+    box-shadow: inset 0 .3rem .5rem rgba(60, 71, 97, 0.5);
+}
+.portfolio-image{
+    width: 100%;
+    height: auto;
+}
+.portfolio-section .col:nth-child(3){
+    margin-left: 0;
+}
+.portfolio-section .btn-load{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+.portfolio-section .mixitup-control-active{
+    background: #fff;
+}
+
+/*=====testmonial=====*/
+.testmonial{
+    background: -webkit-gradient( linear,left top, left bottom,from(rgba(215, 70, 128, 0.9)),to(rgba(215, 70, 128, 0.9))), url(img/testmonial.jpg);
+    background: linear-gradient( rgba(215, 70, 128, 0.9),rgba(215, 70, 128, 0.9)), url(img/testmonial.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.testmonial h2::after{
+    background: #b73c6d;
+}
+.testmonial .col:nth-child(3){
+    margin-left: 0;
+}
+.testmonial .col:nth-child(1),
+.testmonial .col:nth-child(2){
+    margin-top: 4rem;
+}
+.testmonial .col:nth-child(4),
+.testmonial .col:nth-child(3){
+    margin-top: 8rem;
+}
+.client-image{
+    width: 10rem;
+    float: left;
+}
+.client-image img{
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.client-description{
+    width: 35rem;
+    float: left;
+    text-align: justify;
+}
+.testmonial .box p{
+    font-size: 2rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.client-description .role{
+    color: #ffdd99;
+}
+/*=====contact=====*/
+.contact-section{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(60, 84, 153, 0.9)),to(rgba(60, 84, 153, 0.9))),url(img/tech-man.jpg);
+    background: linear-gradient(rgba(60, 84, 153, 0.9),rgba(60, 84, 153, 0.9)),url(img/tech-man.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+     background-attachment: fixed;
+   
+}
+.contact-section h2::after{
+    background: #273a71;
+
+}
+.contact-section .tittle-description{
+    color: #ffffff;
+}
+.contact-section form{
+    margin-top: 5rem;
+    width: 70%;
+    margin-left: 15%;
+}
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea{
+    background: #273a71;
+    width: 100%;
+    border: .1rem solid #273a71;
+    color: #fff;
+    border-radius: .5rem;
+    padding: 1.7rem;
+    font-size: 1.8rem;
+    margin: .5rem 0;
+}
+.contact-section form ::-webkit-input-placeholder{
+    color: #fff;
+    opacity: 1;
+}
+.contact-section form :-ms-input-placeholder{
+    color: #fff;
+    opacity: 1;
+}
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+.btn-submit{
+    background: #30bae7;
+    border: 0;
+    border-bottom: .3rem solid #299ec5;
+}
+.btn-submit:hover{
+    cursor: pointer;
+}
+/*=====footer=====*/
+.footer-section{
+    background: #273a71;
+    padding: 3rem 0;
+    border: .1rem solid rgba(51, 94, 175, 0.89);
+    text-align: center;
+}
+.footer-section li{
+    display: inline-block;
+    margin: 0 2rem;
+    
+}
+.footer-section li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+.footer-section li a:hover{
+    color: #30bae7;
+}
